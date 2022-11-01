@@ -15,8 +15,6 @@ window.addEventListener('scroll', function () {
   moon.style.bottom = value * -0.5 + 'px';
   planet1.style.bottom = value * 0.05 + '%';
   planet2.style.bottom = value * 0.05 + '%';
-  crystal1.style.right = value * 0.075 + 'px';
-  crystal2.style.right = value * 0.075 + 'px';
   usagi.style.bottom = value * 0.05 + '%';
 });
 

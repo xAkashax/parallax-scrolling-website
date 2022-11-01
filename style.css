@@ -5,16 +5,22 @@
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   list-style: none;
+}
+
+html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   width: 100vw;
   min-height: 100vh;
-  background: #090170;
-  background: -webkit-linear-gradient(0deg, #0d0671, #6e00c2);
-  background: linear-gradient(0deg, #0d0671, #6e00c2);
-  overflow-x: hidden;
+  background-image: url(./img/bgc0.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
 }
 
 .head {
@@ -31,6 +37,8 @@ body {
 
 .logo {
   font-size: 3em;
+  color: #551a8b;
+  text-shadow: 1px 1px 10px rgba(216, 27, 200, 0.5);
 }
 
 .navigation {
@@ -81,6 +89,7 @@ body {
 
 .base {
   z-index: 3;
+  mix-blend-mode: luminosity;
 }
 
 .mountain-left,
@@ -91,6 +100,7 @@ body {
 .moon {
   transform: translateY(200px);
   mix-blend-mode: screen;
+  opacity: 0.8;
   z-index: 1;
 }
 
@@ -103,32 +113,190 @@ body {
 .planet1,
 .planet2 {
   mix-blend-mode: exclusion;
+  opacity: 0.8;
   z-index: 1;
 }
 
 .usagi {
   transform: translateY(30px);
   mix-blend-mode: darken;
+  -webkit-filter: drop-shadow(5px -10px 6px #ac63b8);
   filter: drop-shadow(5px -10px 6px #ac63b8);
 }
 
-.sec {
+/* ------------------ */
+
+.main::before,
+.about::before,
+.blog::before,
+.contact::before,
+.blog::after,
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-image: linear-gradient(
+    360deg,
+    rgba(10, 0, 25, 1) 0%,
+    rgba(10, 0, 25, 1) 30%,
+    rgba(59, 27, 107, 0) 100%
+  );
+  z-index: 1000;
+}
+
+.about::before,
+.blog::before,
+.contact::before {
+  bottom: -100px;
+  left: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(10, 0, 25, 1) 0%,
+    rgba(10, 0, 25, 1) 30%,
+    rgba(59, 27, 107, 0) 100%
+  );
+}
+
+.blog::after,
+.contact::after {
+  top: -100px;
+  left: 0;
+}
+
+.about,
+.blog,
+.contact {
   position: relative;
   padding: 100px;
   background-color: #0a0019;
+  z-index: 10;
 }
 
-.sec h2 {
+h2 {
   font-size: 3rem;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgb(216, 27, 200);
+  letter-spacing: 5px;
 }
 
-.sec p {
+p {
   font-size: 1rem;
   color: #fff;
   font-weight: 300;
+  text-align: justify;
+  line-height: 1.5;
+  text-indent: 50px;
 }
+
+/* -------------- */
+
+.container-bg {
+  margin: 0 auto;
+  height: 50vh;
+}
+
+.bgc {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 80vh;
+}
+
+.first {
+  background-image: url('./img/bgc1.jpg');
+}
+
+.second {
+  background-image: url('./img/bgc2.jpg');
+}
+
+.third {
+  background-image: url('./img/bgc3.jpg');
+}
+
+.cards {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 425px;
+  border: 2px solid #d140e7;
+  border-radius: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.img1 {
+  background-image: url('./img/card-img1.jpg');
+}
+.img2 {
+  background-image: url('./img/card-img2.jpg');
+}
+.img3 {
+  background-image: url('./img/card-img3.jpg');
+}
+/* ---------------------------------- */
+
+.contact {
+  height: 50vh;
+}
+/* --------------------------------- */
+
+.container-bg > .third {
+  position: relative;
+  z-index: 0;
+}
+
+.frosted-glass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 25vh;
+  box-shadow: 0 0.3px 0.7px rgba(0, 0, 0, 0.126),
+    0 0.9px 1.7px rgba(0, 0, 0, 0.179), 0 1.8px 3.5px rgba(0, 0, 0, 0.224),
+    0 3.7px 7.3px rgba(0, 0, 0, 0.277), 0 10px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(18px);
+  transition: 0.5s ease;
+}
+
+.frosted-glass:hover {
+  box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+    0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+    0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-title {
+  padding-left: 0.375em;
+  font-size: 3.6em;
+  font-weight: 400;
+  letter-spacing: 1em;
+  color: white;
+  text-shadow: 1px 1px 10px rgba(216, 27, 200, 0.5);
+
+/* --------MOBILE------- */
 
 @media screen and (max-width: 992px) {
   .header {
@@ -205,6 +373,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
@@ -220,6 +389,7 @@ body {
     padding: 30px;
     z-index: 100;
   }
+
   .sec h2 {
     font-size: 1.5em;
   }
