@@ -1,7 +1,7 @@
 # Moon Kingdom - Responsive Parallax Scrolling Webiste inspired by Sailor Moon
 
 Initially, it was supposed to be just an exercise to create a Parallax Scrollin Website. Only for desktop preview.
-Finally, I made an entire landing page out of it.
+Finally, I made an entire landing page out of it. Also for tablet and mobile view.
 Using desktop-first. Webiste inspired by Sailor Moon.
 
 ## Screenshot
