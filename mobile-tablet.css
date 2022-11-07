@@ -1,0 +1,296 @@
+/* --------Tablet------- */
+
+@media only screen and (max-width: 1024px) {
+  .head-logo {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #5902b0;
+  }
+
+  .navigation li a {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    display: inline-block;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background: url(img/menu-icon.png);
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+  }
+
+  .toggle.active {
+    background: url(img/close-icon.png);
+    width: 100px;
+    height: 100px;
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  .main {
+    visibility: visible;
+  }
+
+  section img {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .moon {
+    transform: translateY(-100px);
+  }
+
+  .usagi {
+    transform: translateY(0);
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .container-bg {
+    height: 35vh;
+  }
+
+  .bg {
+    height: 60vh;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 380px;
+  }
+
+  .contact-card {
+    max-width: 350px;
+  }
+
+  .contact-header {
+    font-size: 1.8rem;
+  }
+
+  input,
+  textarea {
+    width: 80%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  button {
+    margin-right: 10%;
+  }
+
+  .frosted-glass {
+    width: 80vw;
+  }
+
+  .copyright {
+    letter-spacing: 2px;
+  }
+
+  .scroll-active {
+    bottom: 70px;
+  }
+}
+
+/* --------Mobile------- */
+
+@media only screen and (max-width: 480px) {
+  .head-logo {
+    top: 20px;
+    left: 20px;
+    font-size: 1.8rem;
+    padding: 0;
+  }
+
+  .navigation li a {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-size: 35px;
+  }
+
+  .toggle.active {
+    width: 50px;
+    height: 50px;
+    background-size: 35px;
+  }
+
+  .stars {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .usagi {
+    -webkit-filter: drop-shadow(2px -5px 7p #ac63b8);
+    filter: drop-shadow(2px -2px 5px #ac63b8);
+  }
+
+  .main::before,
+  .about::before,
+  .blog::before,
+  .contact::before,
+  .blog::after,
+  .contact::after,
+  .footer::after {
+    height: 20px;
+  }
+
+  .about::before,
+  .blog::before,
+  .contact::before {
+    bottom: -20px;
+  }
+
+  .blog::after,
+  .contact::after,
+  .footer::after {
+    top: -20px;
+  }
+
+  .about,
+  .blog,
+  .contact,
+  .footer {
+    position: relative;
+    padding: 50px;
+    background-color: #0a0019;
+    z-index: 10;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .container-bg {
+    height: 35vh;
+  }
+
+  .bg {
+    height: 60vh;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  input,
+  textarea {
+    width: 90%;
+  }
+
+  button {
+    margin-right: 5%;
+  }
+
+  .frosted-glass {
+    width: 80vw;
+  }
+
+  .glass-title {
+    font-size: 2rem;
+  }
+
+  .footer {
+    top: 180px;
+  }
+
+  .footer-socials {
+    width: 90%;
+    margin: 10px auto 20px;
+    display: flex;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  .scroll-up {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 20;
+    bottom: 20px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .arrow i.fa {
+    font-size: 15px;
+  }
+
+  .scroll-active {
+    bottom: 20px;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
