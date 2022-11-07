@@ -2,8 +2,9 @@
 
 @media only screen and (max-width: 1024px) {
   .head-logo {
+    margin-top: 1.25rem;
     width: 50%;
-    margin-top: 20px;
+    line-height: 1.5;
   }
 
   .navigation {
@@ -12,47 +13,47 @@
 
   .navigation.active {
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #5902b0;
+    background-color: rgb(89, 2, 176);
   }
 
   .navigation li a {
-    font-size: 1.8rem;
-    margin: 15px 0;
     display: inline-block;
+    margin: 0.938rem 0;
+    font-size: 1.8rem;
   }
 
   .toggle {
     position: absolute;
-    top: 50px;
-    right: 50px;
     z-index: 10;
-    width: 100px;
-    height: 100px;
+    top: 3.125rem;
+    right: 3.125rem;
+    opacity: 0.7;
+    width: 6.25rem;
+    height: 6.25rem;
     cursor: pointer;
     background: url(img/menu-icon.png);
     background-size: 50px;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.7;
   }
 
   .toggle.active {
+    opacity: 0.5;
+    width: 6.25rem;
+    height: 6.25rem;
     background: url(img/close-icon.png);
-    width: 100px;
-    height: 100px;
-    background-size: 50px;
+    background-size: 3.125rem;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5;
   }
 
   .main {
@@ -68,7 +69,7 @@
   }
 
   .moon {
-    transform: translateY(-100px);
+    transform: translateY(-6.25rem);
   }
 
   .usagi {
@@ -88,16 +89,16 @@
   }
 
   .cards {
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .card {
-    width: 250px;
-    height: 380px;
+    width: 15.625rem;
+    height: 23.75rem;
   }
 
   .contact-card {
-    max-width: 350px;
+    max-width: 21.875rem;
   }
 
   .contact-header {
@@ -116,23 +117,23 @@
   }
 
   textarea {
-    min-height: 150px;
+    min-height: 9.375rem;
   }
 
   button {
     margin-right: 10%;
   }
 
-  .frosted-glass {
+  .background-glass {
     width: 80vw;
   }
 
   .copyright {
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
   }
 
   .scroll-active {
-    bottom: 70px;
+    bottom: 4.375rem;
   }
 }
 
@@ -140,30 +141,30 @@
 
 @media only screen and (max-width: 480px) {
   .head-logo {
-    top: 20px;
-    left: 20px;
-    font-size: 1.8rem;
+    top: 1.25rem;
+    left: 1.25rem;
     padding: 0;
+    font-size: 1.8rem;
   }
 
   .navigation li a {
+    margin: 0.313rem 0;
     font-size: 1.2rem;
-    margin: 5px 0;
   }
 
   .toggle {
     position: absolute;
-    top: 40px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-size: 35px;
+    top: 2.5rem;
+    right: 1.25rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    background-size: 2.188rem;
   }
 
   .toggle.active {
-    width: 50px;
-    height: 50px;
-    background-size: 35px;
+    width: 3.125rem;
+    height: 3.125rem;
+    background-size: 2.188rem;
   }
 
   .stars {
@@ -175,8 +176,8 @@
   }
 
   .usagi {
-    -webkit-filter: drop-shadow(2px -5px 7p #ac63b8);
-    filter: drop-shadow(2px -2px 5px #ac63b8);
+    -webkit-filter: drop-shadow(2px -5px 5px rgb(172, 99, 184));
+    filter: drop-shadow(2px -2px 5px rgb(172, 99, 184));
   }
 
   .main::before,
@@ -186,19 +187,19 @@
   .blog::after,
   .contact::after,
   .footer::after {
-    height: 20px;
+    height: 1.25rem;
   }
 
   .about::before,
   .blog::before,
   .contact::before {
-    bottom: -20px;
+    bottom: -1.25rem;
   }
 
   .blog::after,
   .contact::after,
   .footer::after {
-    top: -20px;
+    top: -1.25rem;
   }
 
   .about,
@@ -206,9 +207,9 @@
   .contact,
   .footer {
     position: relative;
-    padding: 50px;
-    background-color: #0a0019;
     z-index: 10;
+    padding: 3.125rem;
+    background-color: #0a0019;
   }
 
   h2 {
@@ -230,8 +231,8 @@
 
   .cards {
     flex-direction: column;
-    gap: 15px;
-    margin-top: 40px;
+    gap: 0.938rem;
+    margin-top: 2.5rem;
   }
 
   input,
@@ -243,54 +244,55 @@
     margin-right: 5%;
   }
 
-  .frosted-glass {
+  .background-glass {
     width: 80vw;
   }
 
   .glass-title {
-    font-size: 2rem;
+    padding-left: 1.375rem;
+    font-size: 1.8rem;
   }
 
   .footer {
-    top: 180px;
+    top: 11.25rem;
   }
 
   .footer-socials {
-    width: 90%;
-    margin: 10px auto 20px;
     display: flex;
+    margin: 0.625rem auto 1.25rem;
+    width: 90%;
   }
 
   .copyright {
     font-size: 0.8rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
   }
 
   .scroll-up {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
     position: fixed;
     z-index: 20;
-    bottom: 20px;
-    right: 10px;
-    cursor: pointer;
+    bottom: 1.25rem;
+    right: 0.625rem;
     opacity: 0;
+    margin: 0 auto;
+    width: 3.125rem;
+    height: 3.125rem;
+    cursor: pointer;
   }
 
   .arrow {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
   }
 
   .arrow i.fa {
-    font-size: 15px;
+    font-size: 0.938rem;
   }
 
   .scroll-active {
-    bottom: 20px;
-    pointer-events: auto;
+    bottom: 1.25rem;
     opacity: 1;
     transform: translateY(-20px);
+    pointer-events: auto;
   }
 }
